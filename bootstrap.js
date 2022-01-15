@@ -1,4 +1,4 @@
-const REPOSITORY_MASTER = "https://github.com/TenaciousBen/bitburner/blob/master/";
+const REPOSITORY_MASTER = "https://raw.githubusercontent.com/TenaciousBen/bitburner/master/";
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -20,5 +20,6 @@ async function fetch(ns, scriptNameWithExtension) {
 	const url = REPOSITORY_MASTER + scriptNameWithExtension;
 	const successful = await ns.wget(url, scriptNameWithExtension, "home");
 	if (!successful) throw `Could not download script ${scriptNameWithExtension}`;
+	ns.s
 	ns.tprint(`${scriptNameWithExtension} downloaded to home`);
 }
