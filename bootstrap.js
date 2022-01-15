@@ -20,6 +20,5 @@ async function fetch(ns, scriptNameWithExtension) {
 	const url = REPOSITORY_MASTER + scriptNameWithExtension;
 	const successful = await ns.wget(url, scriptNameWithExtension, "home");
 	if (!successful) throw `Could not download script ${scriptNameWithExtension}`;
-	ns.s
 	ns.tprint(`${scriptNameWithExtension} downloaded to home`);
 }
